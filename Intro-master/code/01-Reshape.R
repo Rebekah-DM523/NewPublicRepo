@@ -5,7 +5,7 @@
 ## Tidy data
 
 # Values in column names 
-
+## Reading csv file
 raw <- read.csv("data/pew.csv", check.names = F)
 
 head(raw)
@@ -21,7 +21,7 @@ tidy <- melt(raw, id = "religion",
   variable.name = "income", value.name = "n")
 
 # Variable names in cells
-
+## Reading CSV
 raw <- read.delim("data/weather.txt", check.names = F, na.strings = ".")
 
 # Your Turn
@@ -59,11 +59,12 @@ head(tidy)
 # ------------------------------------------
 
 # Data split across many files
-
+##Splitting into two data frames
 df1 <- data.frame(color = "white", value = c(3, 4))
 df2 <- data.frame(color = "blue", value = c(3, 4, 5))
 rbind(df1, df2)
 
+##Overriding exisitng df1 and df2
 df1 <- data.frame(color = "white", value = c(1, 2, 3))
 df2 <- data.frame(x = c("a", "b", "c"), n = c(3, 4, 5))
 cbind(df1, df2)
